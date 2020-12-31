@@ -1,0 +1,54 @@
+<div class=" parent">
+  <div class="sell">
+    <div  class="sell-div-one" >
+ <div class="sell-search-form">
+  <form class="example-form">
+    <mat-label> Search for products</mat-label>
+    <mat-form-field class="example-full-width">
+      <mat-icon matSuffix>search</mat-icon>
+      <mat-label>Search</mat-label>
+      <input matInput #search maxlength="256" placeholder="Ex. I need help with...">
+      <mat-hint align="start"><strong>Enter the product name</strong> </mat-hint>
+      <mat-hint align="end">{{search.value}}</mat-hint>
+    </mat-form-field>
+  </form>
+ </div>
+ <div class="sell-resuable-card">
+  <div>
+<app-sell-product-card></app-sell-product-card>
+  </div>
+  <div>
+    <app-sell-product-card></app-sell-product-card>
+      </div>
+      <div>
+        <app-sell-product-card></app-sell-product-card>
+          </div>
+          <div>
+            <app-sell-product-card></app-sell-product-card>
+              </div>
+ </div>
+    </div>
+      <div class="sell-div-two">
+        <mat-card class="example-card">
+          <!-- <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header> -->
+          <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+          <mat-card-content>
+            <p>
+              This register has been open for 6 days.
+              Having sales from multiple days in one register closure could create problems when you reconcile your accounts.
+            </p>
+          </mat-card-content>
+          <mat-card-actions id="mat-action-btn">
+            <button class="sell-action-btn mt-2" color="primary" mat-raised-button>Start selling anyway
+            </button>
+            <!-- <button mat-button>SHARE</button> -->
+            <button class="sell-action-btn mt-2" mat-stroked-button color="primary">Close Register First</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+</div>
