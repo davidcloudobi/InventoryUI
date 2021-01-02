@@ -1,0 +1,95 @@
+<div class="parent">
+<div class="product-section-one">
+  <div>
+    <h1>Products</h1>
+  </div>
+  <div id="product-actions">
+    <div>
+      <p>Add, view and edit your products all in one place. <a [routerLink]="['/']" routerLinkActive="router-link-active" >Need help?</a>
+      </p>
+    </div>
+    <div id="product-btn">
+      <button mat-raised-button>Import</button>
+      <button id="add" mat-raised-button color="primary">Add Product</button>
+    </div>
+  </div>
+</div>
+<div class="product-section-two">
+  <form class="example-form">
+<div>
+
+  <mat-label class="label-item" > Search for products</mat-label>
+  <mat-form-field appearance="outline" class="example-full-width">
+    <mat-icon matSuffix>search</mat-icon>
+    <mat-label>Search</mat-label>
+    <input matInput #search maxlength="256" placeholder="Ex. I need help with...">
+    <mat-hint align="start"><strong>Enter the product name</strong> </mat-hint>
+    <mat-hint align="end">{{search.value}}</mat-hint>
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-label class="label-item" > Search for products</mat-label>
+    <mat-form-field appearance="outline" class="form-items" >
+      <mat-label>Status</mat-label>
+      <mat-select >
+        <mat-option *ngFor="let item of productType" value="item">{{item}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+</div>
+
+<div>
+  <mat-label class="label-item" > Search for products</mat-label>
+    <mat-form-field appearance="outline" class="form-items" >
+      <mat-label>Customer</mat-label>
+      <input matInput placeholder="Customer">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Customer Name</mat-hint>
+    </mat-form-field>
+</div>
+
+
+<div>
+  <mat-label class="label-item" > Search for products</mat-label>
+    <mat-form-field appearance="outline" class="form-items" >
+      <mat-label>Status</mat-label>
+      <mat-select >
+        <mat-option *ngFor="let item of productType" value="item">{{item}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+</div>
+
+
+<div>
+  <mat-label class="label-item" > Search for products</mat-label>
+    <mat-form-field appearance="outline" class="form-items" >
+      <mat-label>Status</mat-label>
+      <mat-select >
+        <mat-option *ngFor="let item of productType" value="item">{{item}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+</div>
+
+<div>
+  <mat-label class="label-item" > Search for products</mat-label>
+    <mat-form-field appearance="outline" class="form-items" >
+      <mat-label>Status</mat-label>
+      <mat-select >
+        <mat-option *ngFor="let item of productType" value="item">{{item}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+</div>
+<div></div>
+    <div id="product-action-search-btn">
+
+      <button mat-raised-button color="primary">Primary</button>
+    </div>
+
+  </form>
+</div>
+<div class="product-section-three">
+  <div class="pb-4">
+    <app-sales-history-table [dataSource] = 'dataSource' [columnsToDisplay] = 'columnsToDisplay' ></app-sales-history-table>
+  </div>
+</div>
+</div>

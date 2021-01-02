@@ -8,6 +8,18 @@ import { MatListModule } from '@angular/material/list';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatOptionModule } from '@angular/material/core';
+import {MatSelectModule} from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 const materialComponents = [
   MatToolbarModule,
@@ -17,7 +29,19 @@ const materialComponents = [
   MatListModule,
   MatExpansionModule,
   MatCardModule,
-  MatInputModule
+  MatInputModule,
+  MatDialogModule,
+  MatDividerModule,
+  MatTabsModule,
+  MatFormFieldModule,
+  MatOptionModule,
+  MatSelectModule,
+  MatTableModule,
+  MatPaginatorModule,
+  MatSortModule,
+  MatDatepickerModule,
+  MatMomentDateModule,
+  MatNativeDateModule
 ];
 
 @NgModule({

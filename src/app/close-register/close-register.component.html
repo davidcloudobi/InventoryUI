@@ -1,0 +1,149 @@
+<div id="parent">
+  <div id="grid-one">
+    <div >
+      <h1>
+        Close Register
+      </h1>
+    </div>
+    <div class="p-5" id="close-reg">
+      <p>
+        Close your register to finalize payments and sales for the day.
+      </p>
+    </div>
+    <div class="pt-4" id="info">
+      <div id="info-one">
+        <h2>
+          Register Details
+        </h2>
+      </div>
+    <div id="info-two">
+      <div class="info-content" >
+        <h3>Outlet</h3>
+        <p>Main Outlet</p>
+       </div>
+        <div class="info-content" >
+          <h3>Register</h3>
+          <p> Main Register</p>
+        </div>
+      <div class="info-content" >
+        <h3>Closure #  </h3>
+        <p>2</p>
+      </div>
+       <div class="info-content" >
+        <h3>Opening time</h3>
+        <p>Fri, 25th December, 2020, 8:28pm</p>
+       </div>
+    </div>
+    <div></div>
+
+    </div>
+  </div>
+  <div id="grid-two">
+    <div>
+      <h1 id="payments-summary">
+        Payments Summary
+      </h1>
+<p>
+Balance your register by entering the amount counted from the till and other payment terminals into the empty fields here.
+</p>
+    </div>
+
+    <div class="payments-summary-breakdown">
+<div>
+   <mat-divider></mat-divider>
+</div>
+<div>
+  <div class="break-down">
+    <h2>
+      Payment Types
+    </h2>
+      <h2>Expected (₦)</h2>
+      <h2>
+        Counted (₦)
+      </h2>
+      <h2>
+        Differences (₦)
+      </h2>
+  </div>
+  <div>
+     <mat-divider></mat-divider>
+  </div>
+</div>
+<div>
+  <div class="break-down">
+    <span>
+      View Cash Payments, Floats and Movements
+      <span id="set-float">
+        <mat-icon class="icon-warning" >warning</mat-icon>
+      <span><small>NO FLOAT SET</small></span></span>
+      </span>
+
+      <p> 163929.84	</p>
+
+      <mat-form-field appearance="outline" class="example-form-field">
+        <mat-label> Enter amount</mat-label>
+        <input matInput type="text" [(ngModel)]="value">
+        <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <p></p>
+
+</div>
+<div> <mat-divider></mat-divider></div>
+</div>
+<div>
+  <div class="break-down">
+    <!-- <p>Cash Payments Received</p>
+    <p>163929.84</p>
+    <p></p> -->
+    <p id="set-warning"><mat-icon class="icon-warning-2" >warning</mat-icon><small>You have not set the opening cash float. <a (click)="openDialog()" >Set now</a>.</small></p>
+    <!-- <button mat-button (click)="openDialog()">Launch dialog</button> -->
+  </div>
+  <div> <mat-divider></mat-divider></div>
+</div>
+<div>
+  <div class="break-down">
+    <p>Cash Payments Received</p>
+    <p>163929.84</p>
+    <p></p>
+  </div>
+  <div> <mat-divider></mat-divider></div>
+</div>
+<div>
+  <div class="break-down">
+    <p>Store Credit</p>
+    <p>0.0</p>
+    <p>0.0</p>
+    <p>0.0</p>
+  </div>
+  <div> <mat-divider></mat-divider></div>
+</div>
+<div class="break-down">
+  <p>Totals</p>
+  <p>163929.84</p>
+</div>
+    </div>
+  </div>
+  <div id="grid-three">
+    <div> <mat-divider></mat-divider></div>
+
+    <div class="break-down">
+      <h1>Closing Summary</h1>
+    <div>
+      <h2>
+        Note</h2>
+        <form class="example-form-2">
+            <mat-form-field appearance="outline" class="example-full-width-2">
+            <mat-label>Add a register</mat-label>
+            <textarea matInput placeholder="Type to add a register closure note"></textarea>
+          </mat-form-field>
+          <button id="add-btn" mat-raised-button color="primary">Close Register</button>
+        </form>
+    </div>
+
+    </div>
+
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sell',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SellComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router) {}
 
   ngOnInit(): void {
+  }
+
+  openCloseReg(): void{
+    this.router.navigate(['/registerclosure']);
+
   }
 
 }

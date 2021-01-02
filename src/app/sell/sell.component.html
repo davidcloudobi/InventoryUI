@@ -3,8 +3,8 @@
     <div  class="sell-div-one" >
  <div class="sell-search-form">
   <form class="example-form">
-    <mat-label> Search for products</mat-label>
-    <mat-form-field class="example-full-width">
+    <mat-label > Search for products</mat-label>
+    <mat-form-field appearance="outline" class="example-full-width">
       <mat-icon matSuffix>search</mat-icon>
       <mat-label>Search</mat-label>
       <input matInput #search maxlength="256" placeholder="Ex. I need help with...">
@@ -46,7 +46,7 @@
             <button class="sell-action-btn mt-2" color="primary" mat-raised-button>Start selling anyway
             </button>
             <!-- <button mat-button>SHARE</button> -->
-            <button class="sell-action-btn mt-2" mat-stroked-button color="primary">Close Register First</button>
+            <button (click)="openCloseReg()" class="sell-action-btn mt-2" mat-stroked-button color="primary">Close Register First</button>
           </mat-card-actions>
         </mat-card>
       </div>

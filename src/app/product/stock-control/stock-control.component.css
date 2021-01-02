@@ -1,0 +1,79 @@
+.parent{
+  display: grid;
+  /*  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-row-gap: 40px;
+}
+
+
+.product-section-one h1{
+  padding: 40px;
+  background: #e5eaed;
+  min-width: 50px;
+}
+
+#product-actions{
+  padding: 40px;
+  display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   /* grid-column-gap: 100px; */
+
+  background: #f8f9fa;
+}
+
+#product-btn{
+  display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+grid-gap: 10px;
+}
+.action-btn-stock{
+  min-width: 100px;
+  max-width: 150px;
+}
+
+#action-btn-stock{
+
+  max-width: 150px;
+  min-width: 100px;
+}
+
+.example-form {
+  min-width: 150px;
+
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  grid-row-gap: 10px;
+
+}
+
+.action-item{
+ font-weight: 500;
+ cursor: pointer;
+ text-decoration: none;
+}
+.form-fields{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-column-gap: 20px;
+}
+.example-full-width {
+  max-width: 100%;
+  min-width: 80%;
+}
+
+.label-item{
+ padding: 30px;
+}
+#product-action-search-btn{
+align-self: center;
+display: flex;
+justify-content: space-between;
+padding-left: 20px;
+padding-right: 20px;
+}
+#product-action-search-btn button{
+ width: 60%;
+ max-width: 170px;
+ min-width: 100px;
+  }

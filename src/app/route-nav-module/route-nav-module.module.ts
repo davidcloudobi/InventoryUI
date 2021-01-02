@@ -6,6 +6,21 @@ import { SalesLedgerComponent } from '../sales-ledger/sales-ledger.component';
 import { ReportingComponent } from '../reporting/reporting.component';
 import { CustomersComponent } from '../customers/customers.component';
 import { SetupComponent } from '../setup/setup.component';
+import { CloseRegisterComponent } from '../close-register/close-register.component';
+import { SalesHistoryComponent } from '../sales-history/sales-history.component';
+import { SaleTabAllComponent } from '../sale-tab-all/sale-tab-all.component';
+import { SaleTabCompletedComponent } from '../sale-tab-completed/sale-tab-completed.component';
+import { SaleTabContinueComponent } from '../sale-tab-continue/sale-tab-continue.component';
+import { StockControlComponent } from '../product/stock-control/stock-control.component';
+import { InventoryCountsComponent } from '../product/inventory-counts/inventory-counts.component';
+import { PromotionsComponent } from '../product/promotions/promotions.component';
+import { PriceBooksComponent } from '../product/price-books/price-books.component';
+import { ProductTypesComponent } from '../product/product-types/product-types.component';
+import { SuppliersComponent } from '../product/suppliers/suppliers.component';
+import { BrandsComponent } from '../product/brands/brands.component';
+import { ProductTagsComponent } from '../product/product-tags/product-tags.component';
+import { ProductsComponent } from '../product/products/products.component';
+import { ErrorComponent } from '../error/error.component';
 
 const routes: Routes = [
 {
@@ -30,7 +45,44 @@ const routes: Routes = [
   path: 'setup' , component: SetupComponent
 },
 {
-  path: '**' , redirectTo: '/dashboard', pathMatch: 'full'
+  path: 'registerclosure' , component: CloseRegisterComponent
+},
+{
+  path: 'sale-history' , component: SalesHistoryComponent, children : [
+    {path: 'all', component: SaleTabAllComponent},
+    {path: 'completed', component: SaleTabCompletedComponent},
+    {path: 'continue', component: SaleTabContinueComponent}
+  ]
+},
+{
+  path: 'products' , component: ProductsComponent
+},
+    {
+      path: 'stock-control' , component: StockControlComponent
+    },
+    {
+      path: 'inventory-counts' , component: InventoryCountsComponent
+    },
+    {
+      path: 'promotions' , component: PromotionsComponent
+    },
+    {
+      path: 'price-books' , component: PriceBooksComponent
+    },
+    {
+      path: 'product-types' , component: ProductTypesComponent
+    },
+    {
+      path: 'suppliers' , component: SuppliersComponent
+    },
+    {
+      path: 'brands' , component: BrandsComponent
+    },
+    {
+      path: 'product-tags' , component: ProductTagsComponent
+    },
+{
+  path: '**' , component: ErrorComponent
 }
 ];
 

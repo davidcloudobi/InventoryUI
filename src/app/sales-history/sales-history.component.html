@@ -1,0 +1,37 @@
+<!-- <mat-tab-group isActive = 'true'>
+  <mat-tab  label="First">
+    <div class="tab">
+      <app-sales-history-help></app-sales-history-help>
+      <app-sales-history-search></app-sales-history-search>
+      <app-sales-history-table></app-sales-history-table>
+    </div>
+  </mat-tab>
+  <mat-tab label="Second">
+    <div class="tab">
+      <app-sales-history-help></app-sales-history-help>
+      <app-sales-history-search></app-sales-history-search>
+      <app-sales-history-table></app-sales-history-table>
+    </div>
+   </mat-tab>
+  <mat-tab label="Third">
+     <div class="tab">
+    <app-sales-history-help></app-sales-history-help>
+    <app-sales-history-search></app-sales-history-search>
+    <app-sales-history-table></app-sales-history-table>
+  </div>
+</mat-tab>
+</mat-tab-group> -->
+
+<nav mat-tab-nav-bar [backgroundColor]="background">
+  <a mat-tab-link *ngFor="let link of links"
+     (click)="activeLink = link.label"
+     [active]="activeLink == link.label"
+     [routerLink]="link.path" routerLinkActive="router-link-active"
+     > {{link.label}} </a>
+</nav>
+<app-sale-tab-all *ngIf="activeLink == 'All'; else elseTemplate"></app-sale-tab-all>
+<ng-template #elseTemplate>
+  <router-outlet></router-outlet>
+</ng-template>
+
+

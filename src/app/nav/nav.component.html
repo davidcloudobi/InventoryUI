@@ -10,7 +10,7 @@
       <a mat-list-item href="#">Link 3</a> -->
 
       <!-- ############################################# -->
-      <button  [routerLink]="['/home']" routerLinkActive="router-link-active"  id="my-class" mat-raised-button color="primary">Primary</button>
+      <button id="home-btn"  [routerLink]="['/home']" routerLinkActive="router-link-active"  id="my-class" mat-raised-button >Home</button>
       <mat-accordion>
 
 
@@ -26,8 +26,8 @@
           </mat-expansion-panel-header>
           <!-- <p>This is the primary content of the panel.</p> -->
           <a  class="panel-a"  mat-list-item [routerLink]="['/sell']" routerLinkActive="router-link-active" >Sell</a>
-          <a  class="panel-a" mat-list-item href="#">Open/Close</a>
-          <a  class="panel-a" mat-list-item href="#">Sale History</a>
+          <a  class="panel-a" mat-list-item [routerLink]="['/registerclosure']" routerLinkActive="router-link-active" >Open/Close</a>
+          <a  class="panel-a" mat-list-item  [routerLink]="['/sale-history']" routerLinkActive="router-link-active" >Sale History</a>
           <a  class="panel-a" mat-list-item href="#">Fulfillments</a>
           <a  class="panel-a" mat-list-item href="#">Cash Management</a>
           <a  class="panel-a" mat-list-item href="#">Status</a>
@@ -87,13 +87,15 @@
             </mat-panel-description> -->
           </mat-expansion-panel-header>
           <!-- <p>This is the primary content of the panel.</p> -->
-          <a  class="panel-a"  mat-list-item href="#">Sell</a>
-          <a  class="panel-a" mat-list-item href="#">Open/Close</a>
-          <a  class="panel-a" mat-list-item href="#">Sale History</a>
-          <a  class="panel-a" mat-list-item href="#">Fulfillments</a>
-          <a  class="panel-a" mat-list-item href="#">Cash Management</a>
-          <a  class="panel-a" mat-list-item href="#">Status</a>
-          <a  class="panel-a" mat-list-item href="#">Settings</a>
+          <a  class="panel-a"  mat-list-item [routerLink]="['/products']" routerLinkActive="router-link-active" >Products</a>
+          <a  class="panel-a" mat-list-item [routerLink]="['/stock-control']" routerLinkActive="router-link-active" >Stock Control</a>
+          <a  class="panel-a" mat-list-item [routerLink]="['/inventory-counts']" routerLinkActive="router-link-active">Inventory Counts</a>
+          <a  class="panel-a" mat-list-item  [routerLink]="['/promotions']" routerLinkActive="router-link-active" >Promotions</a>
+          <a  class="panel-a" mat-list-item [routerLink]="['/price-books']" routerLinkActive="router-link-active" >Price Books</a>
+          <a  class="panel-a" mat-list-item [routerLink]="['/product-types']" routerLinkActive="router-link-active" >Product Types</a>
+          <a  class="panel-a" mat-list-item [routerLink]="['/suppliers']" routerLinkActive="router-link-active" >Suppliers</a>
+          <a  class="panel-a" mat-list-item [routerLink]="['/brands']" routerLinkActive="router-link-active" >Brands</a>
+          <a  class="panel-a" mat-list-item [routerLink]="['/product-tags']" routerLinkActive="router-link-active" >Product Tags</a>
         </mat-expansion-panel>
        </div>
        <div class="mt-3">

@@ -1,0 +1,132 @@
+<div class="parent">
+  <div class="product-section-one">
+    <div>
+      <h1>Stock Control</h1>
+    </div>
+    <div id="product-actions">
+      <div>
+        <p>A list of all of your consignments.
+          <a [routerLink]="['/']" routerLinkActive="router-link-active" >Need help?</a>
+        </p>
+      </div>
+      <div id="product-btn">
+        <button class="action-btn-stock" mat-raised-button color="primary">Add Product</button>
+        <button class="action-btn-stock" mat-raised-button color="primary">Add Product</button>
+        <button class="action-btn-stock" mat-raised-button color="primary">Add Product</button>
+        <button class="action-btn-stock" mat-raised-button color="primary">Add Product</button>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="product-section-two">
+    <form class="example-form">
+<div class="form-fields">
+
+  <div>
+    <mat-label class="label-item" > Show</mat-label>
+      <mat-form-field appearance="outline" class="form-items" >
+        <mat-label>Select a Show</mat-label>
+        <mat-select >
+          <mat-option *ngFor="let item of productType" value="item">{{item}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+  </div>
+
+  <div>
+    <mat-label class="label-item" > Name / Number / Product / Supplier Invoice</mat-label>
+      <mat-form-field appearance="outline" class="form-items" >
+        <mat-label>Enter any</mat-label>
+        <input matInput placeholder="Customer">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Customer Name</mat-hint>
+      </mat-form-field>
+  </div>
+
+
+  <div>
+    <mat-label class="label-item" > Outlets</mat-label>
+      <mat-form-field appearance="outline" class="form-items" >
+        <mat-label>Select Outlet</mat-label>
+        <mat-select >
+          <mat-option *ngFor="let item of productType" value="item">{{item}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+  </div>
+
+
+
+  <div>
+    <mat-label class="label-item" > Date From</mat-label>
+    <mat-form-field class="date" appearance="outline">
+      <input  matInput name="from" [matDatepicker]="pickerfrom" placeholder="Date From">
+      <mat-datepicker-toggle matSuffix [for]="pickerfrom"></mat-datepicker-toggle>
+      <mat-datepicker #pickerfrom></mat-datepicker>
+
+  </mat-form-field>
+  </div>
+
+
+
+  <div>
+    <mat-label class="label-item" > Date To</mat-label>
+    <mat-form-field class="date" appearance="outline">
+      <input  matInput name="from" [matDatepicker]="pickerto" placeholder="Date To">
+      <mat-datepicker-toggle matSuffix [for]="pickerto"></mat-datepicker-toggle>
+      <mat-datepicker #pickerto></mat-datepicker>
+
+  </mat-form-field>
+  </div>
+
+  <div>
+    <mat-label class="label-item" >
+      Due date from</mat-label>
+    <mat-form-field class="date" appearance="outline">
+      <input  matInput name="from" [matDatepicker]="pickerDuedatefrom" placeholder="
+      Due date from">
+      <mat-datepicker-toggle matSuffix [for]="pickerDuedatefrom"></mat-datepicker-toggle>
+      <mat-datepicker #pickerDuedatefrom></mat-datepicker>
+
+  </mat-form-field>
+  </div>
+
+  <div>
+    <mat-label class="label-item" >
+      Due date to</mat-label>
+    <mat-form-field class="date" appearance="outline">
+      <input  matInput name="from" [matDatepicker]="pickerDuedateto" placeholder="
+      Due date to">
+      <mat-datepicker-toggle matSuffix [for]="pickerDuedateto"></mat-datepicker-toggle>
+      <mat-datepicker #pickerDuedateto></mat-datepicker>
+
+  </mat-form-field>
+  </div>
+
+
+
+
+
+  <div>
+    <mat-label class="label-item" > Search for products</mat-label>
+      <mat-form-field appearance="outline" class="form-items" >
+        <mat-label>Status</mat-label>
+        <mat-select >
+          <mat-option *ngFor="let item of productType" value="item">{{item}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+  </div>
+</div>
+
+      <div id="product-action-search-btn">
+        <a class="action-item"(click)="togVal = !togVal" > {{ togVal ? 'More filters' : 'Less filters'}} </a>
+        <button mat-raised-button color="primary">Primary</button>
+      </div>
+
+    </form>
+  </div>
+  <div class="product-section-three">
+    <div class="pb-4">
+      <app-sales-history-table [dataSource] = 'dataSource' [columnsToDisplay] = 'columnsToDisplay' ></app-sales-history-table>
+    </div>
+  </div>
+  </div>
