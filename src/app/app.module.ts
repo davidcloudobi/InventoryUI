@@ -35,6 +35,15 @@ import { SuppliersComponent } from './product/suppliers/suppliers.component';
 import { BrandsComponent } from './product/brands/brands.component';
 import { ProductTagsComponent } from './product/product-tags/product-tags.component';
 import { ErrorComponent } from './error/error.component';
+import { InventoryCountHelpComponent } from './inventoryCounts/inventory-count-help/inventory-count-help.component';
+import { InventoryCountAdsComponent } from './inventoryCounts/inventory-count-ads/inventory-count-ads.component';
+import { InventoryCountaTableComponent } from './inventoryCounts/inventory-counta-table/inventory-counta-table.component';
+import { TableComponent } from './Table/table/table.component';
+import { InventoyCountMainComponent } from './inventoryCounts/inventoy-count-main/inventoy-count-main.component';
+import { DueComponent } from './inventoryCounts/due/due.component';
+import { UpComingComponent } from './inventoryCounts/up-coming/up-coming.component';
+import { CompletedComponent } from './inventoryCounts/completed/completed.component';
+import { CancelledComponent } from './inventoryCounts/cancelled/cancelled.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +74,16 @@ import { ErrorComponent } from './error/error.component';
     SuppliersComponent,
     BrandsComponent,
     ProductTagsComponent,
-    ErrorComponent
+    ErrorComponent,
+    InventoryCountHelpComponent,
+    InventoryCountAdsComponent,
+    InventoryCountaTableComponent,
+    TableComponent,
+    InventoyCountMainComponent,
+    DueComponent,
+    UpComingComponent,
+    CompletedComponent,
+    CancelledComponent
   ],
   imports: [
     BrowserModule,

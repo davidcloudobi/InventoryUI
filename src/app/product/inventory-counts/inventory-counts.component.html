@@ -1,1 +1,62 @@
-<p>inventory-counts works!</p>
+<nav mat-tab-nav-bar [backgroundColor]="background">
+  <a mat-tab-link *ngFor="let link of links"
+     (click)="activeLink = link.label"
+     [active]="activeLink == link.label"
+     [routerLink]="link.path" routerLinkActive="router-link-active"
+     > {{link.label}} </a>
+</nav>
+
+
+<app-due *ngIf="activeLink == 'Due (2)'; else elseTemplate"></app-due>
+<ng-template #elseTemplate>
+  <router-outlet></router-outlet>
+</ng-template>
+
+
+<!-- <mat-tab-group  #tabGroup [selectedIndex]="0" (selectedTabChange)="tabChanged($event)" animationDuration="0ms">
+  <mat-tab label="Due (2)">
+    <div class="parent-component">
+
+      <div class="py-3"><app-inventory-count-help></app-inventory-count-help></div>
+
+      <div class="py-3">
+       <app-inventory-counta-table [dataSourceObj] = 'dataSourceObj'></app-inventory-counta-table>
+      </div>
+
+    </div>
+  </mat-tab>
+  <mat-tab label="Upcoming (0)">
+    <div>
+
+      <div class="py-3"><app-inventory-count-help></app-inventory-count-help></div>
+
+      <div class="py-3">
+       <app-inventory-counta-table [dataSourceObj] = 'dataSourceObj'></app-inventory-counta-table>
+      </div>
+
+    </div>
+  </mat-tab>
+  <mat-tab label="Completed">
+    <div>
+
+      <div class="py-3"><app-inventory-count-help></app-inventory-count-help></div>
+
+      <div class="py-3">
+       <app-inventory-counta-table [dataSourceObj] = 'dataSourceObj'></app-inventory-counta-table>
+      </div>
+
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Cancelled">
+    <div>
+
+      <div class="py-3"><app-inventory-count-help></app-inventory-count-help></div>
+
+      <div class="py-3">
+       <app-inventory-counta-table [dataSourceObj] = 'dataSourceObj'></app-inventory-counta-table>
+      </div>
+
+    </div>
+  </mat-tab>
+</mat-tab-group> -->

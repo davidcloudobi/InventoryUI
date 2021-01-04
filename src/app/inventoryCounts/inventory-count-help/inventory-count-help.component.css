@@ -1,0 +1,21 @@
+a{
+  text-decoration: underline;
+  cursor: pointer;
+}
+#help{
+
+
+}
+#parent{
+  background: #e5eaed;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 30px;
+
+
+}
+
+#act-btn{
+height: 100%;
+margin: auto;
+}

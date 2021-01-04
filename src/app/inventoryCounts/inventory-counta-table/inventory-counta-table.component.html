@@ -1,0 +1,3 @@
+<app-table [displayedColumns] = 'displayedColumns' [dataSource] = 'dataSource' *ngIf="toggle"></app-table>
+<p *ngIf="!toggle">You have no cancelled inventory counts</p>
+<button id="act-btn" mat-raised-button color="primary" *ngIf="!toggle">Add Inventory Count</button>
