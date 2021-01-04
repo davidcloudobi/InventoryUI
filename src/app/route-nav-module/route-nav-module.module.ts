@@ -21,6 +21,10 @@ import { BrandsComponent } from '../product/brands/brands.component';
 import { ProductTagsComponent } from '../product/product-tags/product-tags.component';
 import { ProductsComponent } from '../product/products/products.component';
 import { ErrorComponent } from '../error/error.component';
+import { DueComponent } from '../inventoryCounts/due/due.component';
+import { UpComingComponent } from '../inventoryCounts/up-coming/up-coming.component';
+import { CompletedComponent } from '../inventoryCounts/completed/completed.component';
+import { CancelledComponent } from '../inventoryCounts/cancelled/cancelled.component';
 
 const routes: Routes = [
 {
@@ -61,7 +65,12 @@ const routes: Routes = [
       path: 'stock-control' , component: StockControlComponent
     },
     {
-      path: 'inventory-counts' , component: InventoryCountsComponent
+      path: 'inventory-counts' , component: InventoryCountsComponent, children : [
+        {path: 'due', component: DueComponent},
+        {path: 'upcoming', component: UpComingComponent},
+        {path: 'completed', component: CompletedComponent},
+        {path: 'cancelled', component: CancelledComponent}
+      ]
     },
     {
       path: 'promotions' , component: PromotionsComponent

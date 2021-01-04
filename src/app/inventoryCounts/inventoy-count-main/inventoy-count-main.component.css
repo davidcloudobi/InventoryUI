@@ -1,0 +1,4 @@
+.parent-component{
+  display: grid;
+  grid-template-rows: repeat(3, auto-fit);
+}

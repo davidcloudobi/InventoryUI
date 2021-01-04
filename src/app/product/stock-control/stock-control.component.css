@@ -42,7 +42,7 @@ grid-gap: 10px;
 
   width: 100%;
   display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
   grid-row-gap: 10px;
 
 }
@@ -54,17 +54,23 @@ grid-gap: 10px;
 }
 .form-fields{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-column-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
 }
 .example-full-width {
   max-width: 100%;
   min-width: 80%;
 }
+.form-fields-x{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
-.label-item{
- padding: 30px;
 }
+
+
+/* .label-item{
+ padding: 30px;
+} */
 #product-action-search-btn{
 align-self: center;
 display: flex;

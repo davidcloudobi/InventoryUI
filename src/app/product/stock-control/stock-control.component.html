@@ -21,21 +21,22 @@
   </div>
   <div class="product-section-two">
     <form class="example-form">
-<div class="form-fields">
+<div class="form-fields-x">
 
   <div>
-    <mat-label class="label-item" > Show</mat-label>
-      <mat-form-field appearance="outline" class="form-items" >
+    <!-- <mat-label class="label-item-x" > Show</mat-label> -->
+      <mat-form-field appearance="outline" class="form-items-x" >
         <mat-label>Select a Show</mat-label>
         <mat-select >
           <mat-option *ngFor="let item of productType" value="item">{{item}}</mat-option>
         </mat-select>
+        <mat-hint>Show</mat-hint>
       </mat-form-field>
   </div>
 
   <div>
-    <mat-label class="label-item" > Name / Number / Product / Supplier Invoice</mat-label>
-      <mat-form-field appearance="outline" class="form-items" >
+    <!-- <mat-label class="label-item-x" > Name / Number / Product / Supplier</mat-label> -->
+      <mat-form-field appearance="outline" class="form-items-x" >
         <mat-label>Enter any</mat-label>
         <input matInput placeholder="Customer">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
@@ -45,60 +46,61 @@
 
 
   <div>
-    <mat-label class="label-item" > Outlets</mat-label>
-      <mat-form-field appearance="outline" class="form-items" >
+    <!-- <mat-label class="label-item-x" > Outlets</mat-label> -->
+      <mat-form-field appearance="outline" class="form-items-x" >
         <mat-label>Select Outlet</mat-label>
         <mat-select >
           <mat-option *ngFor="let item of productType" value="item">{{item}}</mat-option>
         </mat-select>
+        <mat-hint>Outlets</mat-hint>
       </mat-form-field>
   </div>
 
 
 
-  <div>
-    <mat-label class="label-item" > Date From</mat-label>
+  <div *ngIf="togVal">
+    <!-- <mat-label class="label-item" > Date From</mat-label> -->
     <mat-form-field class="date" appearance="outline">
       <input  matInput name="from" [matDatepicker]="pickerfrom" placeholder="Date From">
       <mat-datepicker-toggle matSuffix [for]="pickerfrom"></mat-datepicker-toggle>
       <mat-datepicker #pickerfrom></mat-datepicker>
-
+      <mat-hint>Date From</mat-hint>
   </mat-form-field>
   </div>
 
 
 
-  <div>
-    <mat-label class="label-item" > Date To</mat-label>
+  <div *ngIf="togVal">
+    <!-- <mat-label class="label-item" > Date To</mat-label> -->
     <mat-form-field class="date" appearance="outline">
       <input  matInput name="from" [matDatepicker]="pickerto" placeholder="Date To">
       <mat-datepicker-toggle matSuffix [for]="pickerto"></mat-datepicker-toggle>
       <mat-datepicker #pickerto></mat-datepicker>
-
+      <mat-hint>Date To</mat-hint>
   </mat-form-field>
   </div>
 
-  <div>
-    <mat-label class="label-item" >
-      Due date from</mat-label>
+  <div *ngIf="togVal">
+    <!-- <mat-label class="label-item" >
+      Due date from</mat-label> -->
     <mat-form-field class="date" appearance="outline">
       <input  matInput name="from" [matDatepicker]="pickerDuedatefrom" placeholder="
       Due date from">
       <mat-datepicker-toggle matSuffix [for]="pickerDuedatefrom"></mat-datepicker-toggle>
       <mat-datepicker #pickerDuedatefrom></mat-datepicker>
-
+      <mat-hint>Due date from</mat-hint>
   </mat-form-field>
   </div>
 
-  <div>
-    <mat-label class="label-item" >
-      Due date to</mat-label>
+  <div *ngIf="togVal">
+    <!-- <mat-label class="label-item" >
+      Due date to</mat-label> -->
     <mat-form-field class="date" appearance="outline">
       <input  matInput name="from" [matDatepicker]="pickerDuedateto" placeholder="
       Due date to">
       <mat-datepicker-toggle matSuffix [for]="pickerDuedateto"></mat-datepicker-toggle>
       <mat-datepicker #pickerDuedateto></mat-datepicker>
-
+      <mat-hint>Due date to</mat-hint>
   </mat-form-field>
   </div>
 
@@ -106,13 +108,14 @@
 
 
 
-  <div>
-    <mat-label class="label-item" > Search for products</mat-label>
+  <div *ngIf="togVal">
+    <!-- <mat-label class="label-item" > Search for products</mat-label> -->
       <mat-form-field appearance="outline" class="form-items" >
         <mat-label>Status</mat-label>
         <mat-select >
           <mat-option *ngFor="let item of productType" value="item">{{item}}</mat-option>
         </mat-select>
+        <mat-hint>Search for products</mat-hint>
       </mat-form-field>
   </div>
 </div>
