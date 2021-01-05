@@ -1,0 +1,84 @@
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+.section{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   grid-column-gap: 100px;
+}
+.section-x{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+}
+#text-area{
+  width: 100%;
+}
+.example-form{
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+   grid-row-gap: 10px;
+   width: 500px;
+   max-width: 500px;
+   min-width: auto;
+}
+
+
+
+@media screen and (max-width: 700px) {
+  .example-form{
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+     grid-row-gap: 10px;
+     width: fit-content;
+  }
+
+}
+.form-item{
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+
+}
+
+.mat-div{
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+#example-full-width {
+  width: 100%;
+}
+
+#search-btn{
+
+display: flex;
+justify-content: flex-end;
+}
+mat-label{
+  padding: 10px;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 0 10px;
+}
+#body-div{
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 10px;
+}
+
+mat-tab-group{
+  position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgb(240, 247, 255);
+}
+#date{
+  width: 100%;
+}
+

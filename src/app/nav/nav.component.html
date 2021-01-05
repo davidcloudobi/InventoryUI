@@ -109,13 +109,9 @@
             </mat-panel-description> -->
           </mat-expansion-panel-header>
           <!-- <p>This is the primary content of the panel.</p> -->
-          <a  class="panel-a"  mat-list-item href="#">Sell</a>
-          <a  class="panel-a" mat-list-item href="#">Open/Close</a>
-          <a  class="panel-a" mat-list-item href="#">Sale History</a>
-          <a  class="panel-a" mat-list-item href="#">Fulfillments</a>
-          <a  class="panel-a" mat-list-item href="#">Cash Management</a>
-          <a  class="panel-a" mat-list-item href="#">Status</a>
-          <a  class="panel-a" mat-list-item href="#">Settings</a>
+          <a  class="panel-a"  mat-list-item [routerLink]="['/customers']" routerLinkActive="router-link-active" >Customers</a>
+          <a  class="panel-a" mat-list-item href="#">Groups</a>
+
         </mat-expansion-panel>
        </div>
        <div class="mt-3">
