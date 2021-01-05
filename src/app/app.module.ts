@@ -11,8 +11,6 @@ import { HomeComponent } from './home/home.component';
 import { SellComponent } from './sell/sell.component';
 import { SalesLedgerComponent } from './sales-ledger/sales-ledger.component';
 import { ReportingComponent } from './reporting/reporting.component';
-
-import { CustomersComponent } from './customers/customers.component';
 import { SetupComponent } from './setup/setup.component';
 import { RouteNavModuleModule } from './route-nav-module/route-nav-module.module';
 import { SellProductCardComponent } from './sell-product-card/sell-product-card.component';
@@ -44,6 +42,8 @@ import { DueComponent } from './inventoryCounts/due/due.component';
 import { UpComingComponent } from './inventoryCounts/up-coming/up-coming.component';
 import { CompletedComponent } from './inventoryCounts/completed/completed.component';
 import { CancelledComponent } from './inventoryCounts/cancelled/cancelled.component';
+import { CustomersComponent } from './customer/customers/customers.component';
+import { CustomersAddDialogComponent } from './customer/customers-add-dialog/customers-add-dialog.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +54,6 @@ import { CancelledComponent } from './inventoryCounts/cancelled/cancelled.compon
     SalesLedgerComponent,
     ReportingComponent,
     ProductsComponent,
-    CustomersComponent,
     SetupComponent,
     SellProductCardComponent,
     CloseRegisterComponent,
@@ -83,7 +82,9 @@ import { CancelledComponent } from './inventoryCounts/cancelled/cancelled.compon
     DueComponent,
     UpComingComponent,
     CompletedComponent,
-    CancelledComponent
+    CancelledComponent,
+    CustomersComponent,
+    CustomersAddDialogComponent
   ],
   imports: [
     BrowserModule,

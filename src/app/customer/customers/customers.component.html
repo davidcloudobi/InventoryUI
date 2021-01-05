@@ -1,0 +1,102 @@
+<div>
+  <div class="parent">
+    <div class="product-section-one">
+      <div>
+        <h1>Customers</h1>
+      </div>
+      <div id="product-actions">
+        <div>
+          <p>Manage your customers and their balances, or segment them by demographics and spending habits.  <a [routerLink]="['/']" routerLinkActive="router-link-active" >Need help?</a>
+          </p>
+        </div>
+        <div id="product-btn">
+          <button mat-raised-button>Import Customers</button>
+          <button id="add" mat-raised-button color="primary" (click)="openDialog()" >Add Customers</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-section-two">
+      <form class="example-form">
+  <!-- <div id="form-fields-x"> -->
+
+    <div>
+      <!-- <mat-label class="label-item-x" > Show</mat-label> -->
+      <mat-form-field appearance="outline" class="form-items-x" class="example-full-width">
+        <mat-icon matSuffix>search</mat-icon>
+        <mat-label>Search</mat-label>
+        <input matInput #search maxlength="256" placeholder="Ex. I need help with...">
+        <mat-hint align="start"><strong>Enter the customer name</strong> </mat-hint>
+        <mat-hint align="end">{{search.value}}</mat-hint>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <!-- <mat-label class="label-item-x" > Outlets</mat-label> -->
+        <mat-form-field appearance="outline" class="form-items-x" >
+          <mat-label>Select a customer group
+          </mat-label>
+          <mat-select >
+            <mat-option *ngFor="let item of productType" value="item">{{item}}</mat-option>
+          </mat-select>
+          <mat-hint>Group
+          </mat-hint>
+        </mat-form-field>
+    </div>
+
+
+    <div  *ngIf="togVal">
+      <!-- <mat-label class="label-item-x" > Name / Number / Product / Supplier</mat-label> -->
+        <mat-form-field appearance="outline" class="form-items-x" >
+          <mat-label>Enter a city</mat-label>
+          <input matInput placeholder="Customer">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>City</mat-hint>
+        </mat-form-field>
+    </div>
+
+    <div *ngIf="togVal">
+      <!-- <mat-label class="label-item" > Search for products</mat-label> -->
+        <mat-form-field appearance="outline" class="form-items" >
+          <mat-label>Country</mat-label>
+          <mat-select >
+            <mat-option *ngFor="let item of productType" value="item">{{item}}</mat-option>
+          </mat-select>
+          <mat-hint>Select a Country</mat-hint>
+        </mat-form-field>
+    </div>
+
+
+
+    <div *ngIf="togVal">
+      <!-- <mat-label class="label-item" > Date From</mat-label> -->
+      <mat-form-field class="date" appearance="outline">
+        <input  matInput name="from" [matDatepicker]="pickerdate" placeholder="Date Created">
+        <mat-datepicker-toggle matSuffix [for]="pickerdate"></mat-datepicker-toggle>
+        <mat-datepicker #pickerdate></mat-datepicker>
+        <mat-hint>Date Created</mat-hint>
+    </mat-form-field>
+    </div>
+
+
+
+
+
+
+
+  <!-- </div> -->
+
+        <div id="product-action-search-btn">
+          <a  id="link" class="action-item"(click)="togVal = !togVal" > {{ togVal ? 'More filters' : 'Less filters'}} </a>
+          <button id="search-btn" mat-raised-button color="primary">Search</button>
+        </div>
+
+      </form>
+    </div>
+    <div class="product-section-three">
+      <div class="pb-4">
+        <app-sales-history-table [dataSource] = 'dataSource' [columnsToDisplay] = 'columnsToDisplay' ></app-sales-history-table>
+      </div>
+    </div>
+    </div>
+
+</div>
