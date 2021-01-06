@@ -18,6 +18,20 @@
   z-index: 1;
 }
 
+
+
+#user{
+display:flex;
+}
+
+
+
+.user-item{
+  font-size: 15px;
+  color: white;
+  padding-left: 10px;
+
+}
 /* .mat-form-field + .mat-form-field {
   margin-left: 8px;
 } */
@@ -53,11 +67,40 @@
   height: 50px;
   padding-left: 30px !important;
 }
-
+#not-icon{
+  padding-top: 10px;
+}
 #toolbar-nav {
   position: fixed;
   position: -webkit-sticky; /* For macOS/iOS Safari */
   top: 0; /* Sets the sticky toolbar to be on top */
   z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+  /* display: flex;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 1fr auto 0.4fr;
+}
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px){
+  #toolbar-nav {
+    position: fixed;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: 1fr auto 0.4fr;
+    grid-gap: 40px;
+  }
+
 }
 
+/* .toolbar-nav-x {
+  position: fixed;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: grid;
+  grid-template-columns: 1fr auto 0.4fr;
+} */

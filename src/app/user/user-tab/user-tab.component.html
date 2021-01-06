@@ -1,0 +1,15 @@
+<!-- <div id="parent"> -->
+  <div  id="section-one">
+    <p id="help">
+      {{text}} <span *ngIf="helpLink"><a [routerLink]="['/sell']" routerLinkActive="router-link-active" > {{helpLink}}</a></span>
+    </p>
+    <button *ngIf="btnText" id="btn" mat-raised-button color="primary">{{btnText}} </button>
+
+  </div>
+  <!-- <div class="pt-5">
+    <app-user-search></app-user-search>
+  </div>
+  <div class="pt-5">
+    <app-user-table ></app-user-table>
+  </div> -->
+<!-- </div> -->

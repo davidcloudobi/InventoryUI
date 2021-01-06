@@ -10,7 +10,7 @@
       <a mat-list-item href="#">Link 3</a> -->
 
       <!-- ############################################# -->
-      <button id="home-btn"  [routerLink]="['/home']" routerLinkActive="router-link-active"  id="my-class" mat-raised-button >Home</button>
+      <button id="home-btn"  [routerLink]="['/dashboard']" routerLinkActive="router-link-active"  id="my-class" mat-raised-button >Home</button>
       <mat-accordion>
 
 
@@ -125,7 +125,7 @@
             </mat-panel-description> -->
           </mat-expansion-panel-header>
           <!-- <p>This is the primary content of the panel.</p> -->
-          <a  class="panel-a"  mat-list-item href="#">Sell</a>
+          <a  class="panel-a"  mat-list-item [routerLink]="['/users']" routerLinkActive="router-link-active" >Users</a>
           <a  class="panel-a" mat-list-item href="#">Open/Close</a>
           <a  class="panel-a" mat-list-item href="#">Sale History</a>
           <a  class="panel-a" mat-list-item href="#">Fulfillments</a>
@@ -142,15 +142,25 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar id="toolbar-nav" color="primary">
+     <div>
       <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>Inventory</span>
+      type="button"
+      aria-label="Toggle sidenav"
+      mat-icon-button
+      (click)="drawer.toggle()"
+      *ngIf="isHandset$ | async">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <!-- <span *ngIf="isHandset$ | async">ggggg</span> -->
+    <span>Inventory</span>
+     </div>
+
+      <div id="user">
+        <a   class="user-item" href="">Help</a>
+        <mat-icon id="not-icon" class="user-item" aria-hidden="false" aria-label="Example notifications icon">notifications</mat-icon>
+        <a   class="user-item" href="">David</a>
+      </div>
+      <div  *ngIf="!(isHandset$ | async)"></div>
     </mat-toolbar>
     <!-- Add Content Here -->
     <ng-content ></ng-content>

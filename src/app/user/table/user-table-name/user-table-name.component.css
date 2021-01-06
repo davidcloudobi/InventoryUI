@@ -1,0 +1,15 @@
+img {
+  width: 70px;
+  height: 70px;
+}
+#parent{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 0.25fr));
+}
+#email{
+  font-size: 10px;
+}
+
+a{
+  font-size: 12px;
+}

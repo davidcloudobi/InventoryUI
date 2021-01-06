@@ -1,0 +1,12 @@
+#hi-header{
+  padding: 40px;
+  background: #e5eaed;
+  min-width: 50px;
+}
+.tab{
+  display: grid;
+  grid-template-rows: repeat(3, auto-fit);
+}
+a{
+  text-decoration: none;
+}
