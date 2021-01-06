@@ -25,6 +25,11 @@ import { UpComingComponent } from '../inventoryCounts/up-coming/up-coming.compon
 import { CompletedComponent } from '../inventoryCounts/completed/completed.component';
 import { CancelledComponent } from '../inventoryCounts/cancelled/cancelled.component';
 import { CustomersComponent } from '../customer/customers/customers.component';
+import { UsersComponent } from '../user/users/users.component';
+import { UserRoleComponent } from '../user/user-role/user-role.component';
+import { UserComponent } from '../user/user/user.component';
+import { UserTableNameComponent } from '../user/table/user-table-name/user-table-name.component';
+import { UserTableComponent } from '../user/user-table/user-table.component';
 
 const routes: Routes = [
 {
@@ -32,6 +37,9 @@ const routes: Routes = [
 },
 {
   path: 'dashboard' , component: HomeComponent
+},
+{
+  path: 'n' , component: UserTableComponent
 },
 {
   path: 'sell' , component: SellComponent
@@ -89,6 +97,12 @@ const routes: Routes = [
     },
     {
       path: 'product-tags' , component: ProductTagsComponent
+    },
+    {
+      path: 'users' , component: UsersComponent, children: [
+        {path: 'user', component: UserComponent},
+        {path: 'role', component: UserRoleComponent}
+      ]
     },
 {
   path: '**' , component: ErrorComponent

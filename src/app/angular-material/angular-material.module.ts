@@ -21,6 +21,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 const materialComponents = [
   MatToolbarModule,
@@ -43,7 +44,8 @@ const materialComponents = [
   MatDatepickerModule,
   MatMomentDateModule,
   MatNativeDateModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatSlideToggleModule
 ];
 
 @NgModule({

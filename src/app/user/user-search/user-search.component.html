@@ -1,0 +1,36 @@
+<form class="example-form">
+  <div>
+    <!-- <mat-label class="label-item-x" > Name / Number / Product / Supplier</mat-label> -->
+      <mat-form-field appearance="outline" class="form-items" >
+        <mat-label>Enter a city</mat-label>
+        <input matInput placeholder="Customer">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>City</mat-hint>
+      </mat-form-field>
+  </div>
+
+  <div>
+    <!-- <mat-label class="label-item" > Search for products</mat-label> -->
+      <mat-form-field appearance="outline" class="form-items" >
+        <mat-label>Role</mat-label>
+        <mat-select >
+          <mat-option *ngFor="let item of Role" value="item">{{item}}</mat-option>
+        </mat-select>
+        <mat-hint>Select a Role</mat-hint>
+      </mat-form-field>
+  </div>
+
+  <div>
+    <!-- <mat-label class="label-item" > Search for products</mat-label> -->
+      <mat-form-field appearance="outline" class="form-items" >
+        <mat-label> Outlet</mat-label>
+        <mat-select >
+          <mat-option *ngFor="let item of  Outlet" value="item">{{item}}</mat-option>
+        </mat-select>
+        <mat-hint>Select a  Outlet</mat-hint>
+      </mat-form-field>
+  </div>
+  <div id="btn">
+    <button mat-raised-button color="primary">Search</button>
+  </div>
+</form>

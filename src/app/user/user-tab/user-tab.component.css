@@ -1,0 +1,20 @@
+#section-one{
+display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-column-gap: 400px;
+  background: #e5eaed;
+}
+
+#btn{
+width: 180px;
+  align-self: center;
+}
+a{
+  text-decoration: underline;
+  cursor: pointer;
+}
+#help{
+  padding: 30px;
+
+}
+

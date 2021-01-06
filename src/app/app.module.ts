@@ -44,6 +44,14 @@ import { CompletedComponent } from './inventoryCounts/completed/completed.compon
 import { CancelledComponent } from './inventoryCounts/cancelled/cancelled.component';
 import { CustomersComponent } from './customer/customers/customers.component';
 import { CustomersAddDialogComponent } from './customer/customers-add-dialog/customers-add-dialog.component';
+import { UsersComponent } from './user/users/users.component';
+import { UserTabComponent } from './user/user-tab/user-tab.component';
+import { UserRoleComponent } from './user/user-role/user-role.component';
+import { UserComponent } from './user/user/user.component';
+import { UserSearchComponent } from './user/user-search/user-search.component';
+import { UserTableComponent } from './user/user-table/user-table.component';
+import { UserTableNameComponent } from './user/table/user-table-name/user-table-name.component';
+import { UserTableEnableComponent } from './user/table/user-table-enable/user-table-enable.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +92,15 @@ import { CustomersAddDialogComponent } from './customer/customers-add-dialog/cus
     CompletedComponent,
     CancelledComponent,
     CustomersComponent,
-    CustomersAddDialogComponent
+    CustomersAddDialogComponent,
+    UsersComponent,
+    UserTabComponent,
+    UserRoleComponent,
+    UserComponent,
+    UserSearchComponent,
+    UserTableComponent,
+    UserTableNameComponent,
+    UserTableEnableComponent
   ],
   imports: [
     BrowserModule,
