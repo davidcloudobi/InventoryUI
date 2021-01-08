@@ -1,0 +1,42 @@
+.input-fields{
+  width: 100%;
+}
+
+#head-div{
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+#card{
+  margin-top: 50px;
+  background: #f8f8f8;
+
+}
+#img {
+  width: 200px;
+  height: 100px;
+}
+button{
+  width: 55%;
+  height: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+a{
+  padding-top: 5px;
+}
+/* #btn-home{
+  display: grid;
+  grid-row-gap: 30px;
+  justify-content: center;
+} */
+
+.user-link{
+  display: flex;
+  justify-content: space-between;
+}
+#head-div{
+
+  padding-bottom: 50px;
+}

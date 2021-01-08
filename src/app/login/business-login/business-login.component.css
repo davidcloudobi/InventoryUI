@@ -1,0 +1,25 @@
+#img {
+width: 30%;
+}
+
+.inputfield{
+  width: 100%;
+}
+ button{
+   width: 70%;
+   height: 50PX;
+ }
+.group-div{
+  display: grid;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+mat-card{
+  max-width: 700px;
+  background: #f8f8f8;
+  text-align: center;
+  }
+  .example-full-width {
+    width: 100%;
+  }
