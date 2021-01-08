@@ -1,0 +1,45 @@
+
+img{
+ width: 30%;
+}
+
+#parent{
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+
+}
+
+#reg{
+  display: grid;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.example-full-width-x {
+  width: 100%;
+}
+
+.first-last-name{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-column-gap: 30px;
+}
+
+button{
+  width: 100%;
+  height: 6%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+mat-card{
+max-width: 700px;
+background: #f8f8f8;
+text-align: center;
+}
+
+.example-container{
+
+}

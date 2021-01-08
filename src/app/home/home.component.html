@@ -1,1 +1,20 @@
-<p>home works!</p>
+<div id="head-div" >
+  <mat-card id="card" >
+ <mat-card-content >
+   <div class="user-link">
+    <img  id="img" mat-card-image src="../../../assets/Image/globe-with-wings-logo.jpg" alt="company logo">
+
+   <h1> Ring in the new year with Vend</h1>
+   </div>
+   <p>The perfect way to kick off 2021. Start a trial today to qualify for our exclusive January promotions.</p>
+<div id="btn-home">
+  <button  [routerLink]="['/registration']" routerLinkActive="router-link-active"  mat-raised-button color="primary">Sign Up</button>
+  <button [routerLink]="['/business/login']" routerLinkActive="router-link-active"  mat-raised-button color="primary">Login</button>
+</div>
+   <span>Includes 24/7 access to support & advice to get you started. No commitment, no credit card required.</span>
+    </mat-card-content>
+    <mat-card-actions>
+
+    </mat-card-actions>
+  </mat-card>
+</div>

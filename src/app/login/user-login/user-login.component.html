@@ -1,0 +1,96 @@
+<!-- <div id="parent">
+  <mat-card class="example-card">
+  <mat-card-content>
+<div id="section-one">
+  <img id="img" src="../../../assets/Image/globe-with-wings-logo.jpg" alt="company logo">
+      <p>
+        The Shiba Inu
+
+      </p>
+</div>
+<form class="example-container">
+  <mat-form-field id="textbox" appearance="outline">
+    <input matInput  placeholder="Your store address"  >
+    <span matSuffix>.ollasystem.com</span>
+
+  </mat-form-field>
+</form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div> -->
+
+<!-- <div id="parent">
+  <mat-card class="example-card">
+  <mat-card-content >
+   <div class="logo">
+    <img class="pl-2" id="img" mat-card-image src="../../../assets/Image/globe-with-wings-logo.jpg" alt="company logo">
+
+   <h1>Sign In</h1>
+   </div>
+   <div id="store-info">
+     <h1>
+       {{storeName}}
+     </h1>
+     <a href="">Not your store?</a>
+   </div>
+      <form  class="example-container">
+        <mat-form-field class="input-field"  appearance="outline">
+          <mat-label>Enter your Username</mat-label>
+          <input matInput  placeholder="Username"  >
+
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'"  placeholder="Password'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Sign In</button>
+    </mat-card-actions>
+  </mat-card>
+</div> -->
+
+<div id="head-div" >
+  <mat-card id="card" >
+ <mat-card-content >
+   <div class="user-link">
+    <img  id="img" mat-card-image src="../../../assets/Image/globe-with-wings-logo.jpg" alt="company logo">
+
+   <h1>Sign In</h1>
+   </div>
+   <div class="user-link">
+     <h1>
+       {{storeName}}
+     </h1>
+     <a href="">Not your store?</a>
+   </div>
+      <form>
+        <mat-form-field  class="input-fields" appearance="outline">
+          <mat-label>Enter your Username</mat-label>
+          <input matInput  placeholder="Username"  >
+
+        </mat-form-field>
+        <mat-form-field class="input-fields" appearance="outline">
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'"  placeholder="Password'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Sign In</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

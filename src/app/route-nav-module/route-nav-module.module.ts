@@ -30,6 +30,9 @@ import { UserRoleComponent } from '../user/user-role/user-role.component';
 import { UserComponent } from '../user/user/user.component';
 import { UserTableNameComponent } from '../user/table/user-table-name/user-table-name.component';
 import { UserTableComponent } from '../user/user-table/user-table.component';
+import { UserLoginComponent } from '../login/user-login/user-login.component';
+import { BusinessLoginComponent } from '../login/business-login/business-login.component';
+import { BusinessRegComponent } from '../login/business-reg/business-reg.component';
 
 const routes: Routes = [
 {
@@ -94,6 +97,17 @@ const routes: Routes = [
     },
     {
       path: 'brands' , component: BrandsComponent
+    }
+    ,
+    {
+      path: 'user/login' , component: UserLoginComponent
+    }
+    ,
+    {
+      path: 'business/login' , component: BusinessLoginComponent
+    },
+    {
+      path: 'registration' , component: BusinessRegComponent
     },
     {
       path: 'product-tags' , component: ProductTagsComponent

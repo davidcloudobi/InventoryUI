@@ -1,0 +1,29 @@
+
+<div class="group-div">
+
+    <mat-card>
+    <div>
+     <div class="logo">
+      <img class="pl-2" id="img" mat-card-image src="../../../assets/Image/globe-with-wings-logo.jpg" alt="company logo">
+
+     <h1>Sign In</h1>
+     </div>
+        <form>
+          <mat-form-field class="inputfield"  appearance="outline">
+            <mat-label>Enter your store address</mat-label>
+            <input matInput  placeholder="Your store address"  >
+            <span matSuffix>.os.com</span>
+
+          </mat-form-field>
+
+
+
+        </form>
+      </div>
+      <mat-card-actions>
+        <button  [routerLink]="['/user/login']" routerLinkActive="router-link-active"  mat-raised-button color="primary">Next</button>
+      </mat-card-actions>
+    </mat-card>
+
+
+</div>

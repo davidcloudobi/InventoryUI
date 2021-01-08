@@ -52,6 +52,9 @@ import { UserSearchComponent } from './user/user-search/user-search.component';
 import { UserTableComponent } from './user/user-table/user-table.component';
 import { UserTableNameComponent } from './user/table/user-table-name/user-table-name.component';
 import { UserTableEnableComponent } from './user/table/user-table-enable/user-table-enable.component';
+import { BusinessLoginComponent } from './login/business-login/business-login.component';
+import { UserLoginComponent } from './login/user-login/user-login.component';
+import { BusinessRegComponent } from './login/business-reg/business-reg.component';
 
 @NgModule({
   declarations: [
@@ -100,7 +103,10 @@ import { UserTableEnableComponent } from './user/table/user-table-enable/user-ta
     UserSearchComponent,
     UserTableComponent,
     UserTableNameComponent,
-    UserTableEnableComponent
+    UserTableEnableComponent,
+    BusinessLoginComponent,
+    UserLoginComponent,
+    BusinessRegComponent
   ],
   imports: [
     BrowserModule,
