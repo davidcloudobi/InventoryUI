@@ -55,6 +55,12 @@ import { UserTableEnableComponent } from './user/table/user-table-enable/user-ta
 import { BusinessLoginComponent } from './login/business-login/business-login.component';
 import { UserLoginComponent } from './login/user-login/user-login.component';
 import { BusinessRegComponent } from './login/business-reg/business-reg.component';
+import { HttpClientModule } from '@angular/common/http';
+import { JwtModule } from '@auth0/angular-jwt';
+
+export function tokenGetter() {
+  return localStorage.getItem("access_token");
+}
 
 @NgModule({
   declarations: [
@@ -115,7 +121,16 @@ import { BusinessRegComponent } from './login/business-reg/business-reg.componen
     AngularMaterialModule,
     RouteNavModuleModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ['localhost:5001'],
+        disallowedRoutes: ['http://example.com/examplebadroute/'],
+        skipWhenExpired: true,
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

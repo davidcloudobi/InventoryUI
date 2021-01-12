@@ -73,24 +73,33 @@
      </h1>
      <a href="">Not your store?</a>
    </div>
-      <form>
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
         <mat-form-field  class="input-fields" appearance="outline">
-          <mat-label>Enter your Username</mat-label>
-          <input matInput  placeholder="Username"  >
+          <mat-label>Enter your email</mat-label>
+          <input formControlName="email"  matInput  name="email"  placeholder="Email"  >
 
         </mat-form-field>
+        <div id="errordiv" *ngIf="myForm.get('email').hasError('required') && myForm.touched && myForm.dirty">
+          Oops, please provide a email address!
+        </div>
+
         <mat-form-field class="input-fields" appearance="outline">
           <mat-label>Enter your password</mat-label>
-          <input matInput [type]="hide ? 'password' : 'text'"  placeholder="Password'">
+          <input formControlName="password"  name="password" matInput [type]="hide ? 'password' : 'text'"  placeholder="Password'">
           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
           </button>
         </mat-form-field>
 
+        <div id="errordiv" *ngIf="myForm.get('password').hasError('required') && myForm.touched && myForm.dirty">
+          Oops, please provide a password!
+        </div>
+
+        <button type="submit"  mat-raised-button color="primary">Sign In</button>
       </form>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary">Sign In</button>
+
     </mat-card-actions>
   </mat-card>
 </div>

@@ -23,3 +23,8 @@ mat-card{
   .example-full-width {
     width: 100%;
   }
+
+  #errordiv{
+  color: red;
+    padding: 10px;
+  }

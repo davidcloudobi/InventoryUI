@@ -33,6 +33,7 @@ import { UserTableComponent } from '../user/user-table/user-table.component';
 import { UserLoginComponent } from '../login/user-login/user-login.component';
 import { BusinessLoginComponent } from '../login/business-login/business-login.component';
 import { BusinessRegComponent } from '../login/business-reg/business-reg.component';
+import { AuthGaurdService } from '../Service/Guard/auth-gaurd.service';
 
 const routes: Routes = [
 {
@@ -42,61 +43,61 @@ const routes: Routes = [
   path: 'dashboard' , component: HomeComponent
 },
 {
-  path: 'n' , component: UserTableComponent
+  path: 'n' , component: UserTableComponent, canActivate: [AuthGaurdService]
 },
 {
-  path: 'sell' , component: SellComponent
+  path: 'sell' , component: SellComponent, canActivate: [AuthGaurdService]
 },
 {
-  path: 'sell-ledager' , component: SalesLedgerComponent
+  path: 'sell-ledager' , component: SalesLedgerComponent, canActivate: [AuthGaurdService]
 },
 {
-  path: 'reporting' , component: ReportingComponent
+  path: 'reporting' , component: ReportingComponent, canActivate: [AuthGaurdService]
 },
 {
-  path: 'customers' , component: CustomersComponent
+  path: 'customers' , component: CustomersComponent, canActivate: [AuthGaurdService]
 },
 {
-  path: 'setup' , component: SetupComponent
+  path: 'setup' , component: SetupComponent, canActivate: [AuthGaurdService]
 },
 {
-  path: 'registerclosure' , component: CloseRegisterComponent
+  path: 'registerclosure' , component: CloseRegisterComponent, canActivate: [AuthGaurdService]
 },
 {
-  path: 'sale-history' , component: SalesHistoryComponent, children : [
-    {path: 'all', component: SaleTabAllComponent},
-    {path: 'completed', component: SaleTabCompletedComponent},
-    {path: 'continue', component: SaleTabContinueComponent}
+  path: 'sale-history' , component: SalesHistoryComponent, canActivate: [AuthGaurdService], children : [
+    {path: 'all', component: SaleTabAllComponent, canActivate: [AuthGaurdService]},
+    {path: 'completed', component: SaleTabCompletedComponent, canActivate: [AuthGaurdService]},
+    {path: 'continue', component: SaleTabContinueComponent, canActivate: [AuthGaurdService]}
   ]
 },
 {
-  path: 'products' , component: ProductsComponent
+  path: 'products' , component: ProductsComponent, canActivate: [AuthGaurdService]
 },
     {
-      path: 'stock-control' , component: StockControlComponent
+      path: 'stock-control' , component: StockControlComponent, canActivate: [AuthGaurdService]
     },
     {
-      path: 'inventory-counts' , component: InventoryCountsComponent, children : [
-        {path: 'due', component: DueComponent},
-        {path: 'upcoming', component: UpComingComponent},
-        {path: 'completed', component: CompletedComponent},
-        {path: 'cancelled', component: CancelledComponent}
+      path: 'inventory-counts' , component: InventoryCountsComponent, canActivate: [AuthGaurdService], children : [
+        {path: 'due', component: DueComponent, canActivate: [AuthGaurdService]},
+        {path: 'upcoming', component: UpComingComponent, canActivate: [AuthGaurdService]},
+        {path: 'completed', component: CompletedComponent, canActivate: [AuthGaurdService]},
+        {path: 'cancelled', component: CancelledComponent, canActivate: [AuthGaurdService]}
       ]
     },
     {
-      path: 'promotions' , component: PromotionsComponent
+      path: 'promotions' , component: PromotionsComponent, canActivate: [AuthGaurdService]
     },
     {
-      path: 'price-books' , component: PriceBooksComponent
+      path: 'price-books' , component: PriceBooksComponent, canActivate: [AuthGaurdService]
     },
     {
-      path: 'product-types' , component: ProductTypesComponent
+      path: 'product-types' , component: ProductTypesComponent, canActivate: [AuthGaurdService]
     },
     {
-      path: 'suppliers' , component: SuppliersComponent
+      path: 'suppliers' , component: SuppliersComponent, canActivate: [AuthGaurdService]
     },
     {
-      path: 'brands' , component: BrandsComponent
+      path: 'brands' , component: BrandsComponent, canActivate: [AuthGaurdService]
     }
     ,
     {
@@ -110,12 +111,12 @@ const routes: Routes = [
       path: 'registration' , component: BusinessRegComponent
     },
     {
-      path: 'product-tags' , component: ProductTagsComponent
+      path: 'product-tags' , component: ProductTagsComponent, canActivate: [AuthGaurdService]
     },
     {
-      path: 'users' , component: UsersComponent, children: [
-        {path: 'user', component: UserComponent},
-        {path: 'role', component: UserRoleComponent}
+      path: 'users' , component: UsersComponent, canActivate: [AuthGaurdService], children: [
+        {path: 'user', component: UserComponent, canActivate: [AuthGaurdService]},
+        {path: 'role', component: UserRoleComponent, canActivate: [AuthGaurdService]}
       ]
     },
 {

@@ -16,3 +16,23 @@ export interface InventoryCountTableData{
     Completed: InventoryCountData[];
      Cancelled: InventoryCountData[];
 }
+
+export interface LoginUser{
+  email: string;
+  password: string;
+}
+
+export interface UserObj{
+  id: string; name: string;  email: string; token: string;
+}
+
+export interface BusinessObj{
+    name: string;
+    contactName: string;
+    email: string;
+    phone: string;
+    website: string;
+    logoUrl: string;
+    businessTypeId: string;
+    id: string;
+}

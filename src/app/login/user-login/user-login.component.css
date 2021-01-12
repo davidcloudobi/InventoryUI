@@ -91,3 +91,9 @@
     display: flex;
     justify-content: space-between;
   }
+
+  #errordiv{
+    color: red;
+      padding-bottom: 10px;
+      text-align: left !important;
+    }
